@@ -13,4 +13,4 @@ echo "<p>Titulo {$PHP->Titulo} </p>";
 echo "<p>Quantidade {$PHP->Quantidade} </p>";
 echo "<p>Valor R$ " . number_format($PHP->Valor, 2, ",", ".") . "</p>";
 
-$PHP02 = new Apostila\Informatica("PHP o mundo fantastico!!");
+$PHP02 = new Apostila\Informatica();

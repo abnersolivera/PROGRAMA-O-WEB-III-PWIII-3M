@@ -7,8 +7,8 @@ namespace Apostila{
         private $Quantidade;
         private $Valor;
 
-        function __construct($value){
-            $this->Titulo = $value;
+        function __construct(){
+
         }
 
         //atribuir
