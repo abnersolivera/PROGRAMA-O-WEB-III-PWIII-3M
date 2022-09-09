@@ -8,13 +8,21 @@ $senha = $_POST['senha'];
 
 //echo $login . " " . $senha; 
 
-$sql = " select  * from tb_usuario " ;
-$sql .= " where login_us = '".$login."' and  senha_us ='".md5($senha)."'";
+$sql = " select  * from tb_usuario ";
+$sql .= " where login_us = '" . $login . "' and  senha_us ='" . md5($senha) . "'";
 
 //echo $sql;
 
 // executar a string feita em php e converte em comando sql
 
-   $resultado  = mysqli_query($banco, $sql );
+$resultado = mysqli_query($banco, $sql);
 // saber o numero de linha retornado
-   echo mysqli_num_rows($resultado);
+
+
+
+// Direcionar par a tela menu.php
+if(mysqli_num_rows($resultado) == 1){
+   header("location:menu.php");
+}else{
+   header("location:index.php");
+}

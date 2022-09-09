@@ -22,7 +22,7 @@ include_once("../servidor.php");
         <div class="row">
             <section class="col-md-2">
 
-               
+
             </section>
             <section class="col-md-8">
                 <h3 class="mt-5">Cadastro de Livro</h2>
@@ -49,13 +49,6 @@ include_once("../servidor.php");
 
                         <div class="form-group">
                             <label for="ed">Editora: </label>
-                            
-                            <?php
-                            
-                            }
-                               
-                            ?> 
-                            
                             </select>
 
                         </div>

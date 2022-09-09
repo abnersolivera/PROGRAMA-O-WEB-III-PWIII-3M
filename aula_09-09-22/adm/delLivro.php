@@ -11,10 +11,6 @@
 
 <body>
     <div class="container">
-
-<?php
-/
-?>
 </body>
 
 <script src="../js/jquery-3.5.1.slim.min.js"></script>

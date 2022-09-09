@@ -93,7 +93,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `miniPhp`.`tb_cad_livro` (
   `cod_us` INT NULL,
   `cod_liv` INT NULL,
-   CONSTRAINT `fk_us`
+  CONSTRAINT `fk_us`
     FOREIGN KEY (`cod_us`)
     REFERENCES `miniPhp`.`tb_usuario` (`cod_us`)
     ON DELETE CASCADE
@@ -116,13 +116,13 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 INSERT INTO TB_USUARIO(NOME_US, LOGIN_US, SENHA_US) VALUES ("josé","jose@gmail.com" ,md5("123"));
 
 SELECT * FROM TB_USUARIO;
-	 
+
 ## INSERIR EDITORA
 
 INSERT INTO TB_EDITORA(NOME_ED) 
- VALUES("novatec"),
+VALUES("novatec"),
         ("alta books"),
         ("deitel");
- 
+
  SELECT * FROM TB_EDITORA;
 
