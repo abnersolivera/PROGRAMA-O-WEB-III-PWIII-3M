@@ -49,6 +49,20 @@ include_once("../servidor.php");
 
                         <div class="form-group">
                             <label for="ed">Editora: </label>
+                            <?php
+                                // fazer a query no banco
+                                $editora = "SELECT * FROM tb_editora";
+                                //executar
+                                $resultado = mysqli_query($banco, $editora);
+                            ?>
+                            <select class="form-control" name="ed" id="ed">
+                                <option>selecione...</option>
+                                <?php
+                                    //array                                    
+                                    while ($tbEditora = mysqli_fetch_array($resultado)){
+                                        echo "<option value='".$tbEditora["cod_ed"]."'>".$tbEditora["nome_ed"]."</option>";
+                                    }  
+                                ?>
                             </select>
 
                         </div>

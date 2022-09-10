@@ -20,15 +20,8 @@ if (!$banco) {
    printf("Falha na conexão, motivo : " . mysqli_connect_error());
 }
 else {
-   //echo "Conexão feita com sucesso !!! Bora Bill";
-
+//echo "Conexão feita com sucesso !!! Bora Bill";
 }
-
-
-
-
-
-
 // Orientação Objeto
 
 

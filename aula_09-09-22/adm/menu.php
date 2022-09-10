@@ -11,29 +11,19 @@ session_start();
     <title>Document</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
-
-
 </head>
-
 <body>
     <div class="container">
+        <?php echo "<h5> Olá " . $_SESSION["login"]["user"]. "</h5>" ?>
         <nav class="nav nav-pills flex-column flex-sm-row">
             <a class="flex-sm-fill text-sm-center nav-link" href="cadastro.php" target="link">Cadastro de livros</a>
             <a class="flex-sm-fill text-sm-center nav-link" href="lista_livro.php" target="link">Lista de Livros</a>
             <a class="flex-sm-fill text-sm-center nav-link" href="#" target="link">
             <a class="flex-sm-fill text-sm-center nav-link" href="#">Usuários</a>
             <a class="flex-sm-fill text-sm-center nav-link " href="sair.php" tabindex="-1">sair</a>
-
         </nav>
-
-        <iframe name="link" width="100%" height="1000px" frameborder="0" style="border: 0;">
-
-
+        <iframe name="link" width="100%" height="1000px" frameborder="0" style="border: 0;"></iframe>
     </div>
-
-
-    </iframe>
-
 
 
 
