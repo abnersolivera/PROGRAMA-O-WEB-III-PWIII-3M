@@ -15,5 +15,9 @@ Apresentado na aula como utilizar o metodo estatico, deu o conceito do namespace
 [Acessar Conteudo da Aula](https://github.com/abnersolivera/PROGRAMA-O-WEB-III-PWIII-3M/tree/main/aula_08-26-22)
 
 ### AULA - 02-09-22 - NameSpace
-Apresentado na a utilização do namespace em php.
+Apresentado na aula a utilização do namespace em php.
 [Acessar Conteudo da Aula](https://github.com/abnersolivera/PROGRAMA-O-WEB-III-PWIII-3M/tree/main/aula_09-02-22)
+
+### AULA - 09-09-22 - Conexão Banco de Dados - Procedural
+Apresentado na aula como fazer conexão procedural utlizando MySql.
+[Acessar Conteudo da Aula](https://github.com/abnersolivera/PROGRAMA-O-WEB-III-PWIII-3M/tree/main/aula_09-09-22)
