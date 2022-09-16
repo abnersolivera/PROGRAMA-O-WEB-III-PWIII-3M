@@ -21,3 +21,7 @@ Apresentado na aula a utilização do namespace em php.
 ### AULA - 09-09-22 - Conexão Banco de Dados - Procedural
 Apresentado na aula como fazer conexão procedural utlizando MySql.
 [Acessar Conteudo da Aula](https://github.com/abnersolivera/PROGRAMA-O-WEB-III-PWIII-3M/tree/main/aula_09-09-22)
+
+### AULA - 09-16-22
+Continuação da aula 09-09-22 como fazer conexão procedural utlizando MySql.
+[Acessar Conteudo da Aula](https://github.com/abnersolivera/PROGRAMA-O-WEB-III-PWIII-3M/tree/main/aula_09-16-22)
