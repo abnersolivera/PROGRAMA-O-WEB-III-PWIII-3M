@@ -43,17 +43,21 @@ $sql = " INSERT INTO TB_LIVRO(cod_ed, titulo_liv, desc_liv, img_liv, valor_liv) 
 
 $res = mysqli_query($banco, $sql);
 
-//saber
+//saber se algo foi executado no banco
 
 if(mysqli_affected_rows($banco)){
     echo " <script type='text/javascript'> alert('Cadastro feito!!!!') </script>";
+
+    //3° Mover a imagem para pasta
+    $movendoFoto = move_uploaded_file($imagem['tmp_name'], $caminho);
+
+    //4° Indentificar o usuario e livro
+    $cod_liv = mysqli_insert_id($banco);
+
+    $sql_cad_livro = " INSERT INTO TB_CAD_LIVRO VALUES(".$_SESSION["login"]["id"].",".$cod_liv.") ";
+
+    mysqli_query($banco, $sql_cad_livro);
 }
-
-//3° Mover a imagem para pasta
-
-$movendoFoto = move_uploaded_file($imagem['tmp_name'], $caminho);
-
-//4° Indentificar o usuario e livro
 
 
 ?>

@@ -17,7 +17,24 @@ include_once("servidor.php");
     <div class="container mt-5">
         <table class="table table-bordered">
             <tr>
+                <?php
+                    $sql = " SELECT * FROM TB_LIVRO ";
 
+                    $tabela = mysqli_query($banco, $sql);
+
+                    //saber quantas linha foram retoranadas
+
+                    mysqli_num_rows($tabela);
+
+                    while($campo = mysqli_fetch_array($tabela)){
+                        echo 
+                            "<td>
+                                <img src='adm/".$campo["img_liv"]."'>
+                                <h3>".$campo["titulo_liv"]."</h3>
+                                <a href='detalhe.php?cod_liv=".$campo["cod_liv"]."'>detalhe</a>
+                            </td>";
+                    }
+                ?>
             </tr>
 
         </table>
