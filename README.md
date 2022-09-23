@@ -25,3 +25,7 @@ Apresentado na aula como fazer conexão procedural utlizando MySql.
 ### AULA - 09-16-22
 Continuação da aula 09-09-22 como fazer conexão procedural utlizando MySql.
 [Acessar Conteudo da Aula](https://github.com/abnersolivera/PROGRAMA-O-WEB-III-PWIII-3M/tree/main/aula_09-16-22)
+
+### AULA - 09-23-22
+Continuação da aula 09-09-22 como fazer conexão procedural utlizando MySql, listar dados do bancon função editar e excluir.
+[Acessar Conteudo da Aula](https://github.com/abnersolivera/PROGRAMA-O-WEB-III-PWIII-3M/tree/main/aula_09-23-22)
