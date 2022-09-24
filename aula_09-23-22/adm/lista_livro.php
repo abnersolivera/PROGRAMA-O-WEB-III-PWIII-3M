@@ -2,6 +2,8 @@
 // caminho do servidor
 include_once("../servidor.php");
 
+extract($_POST);
+
 
 ?>
 <!DOCTYPE html>
@@ -14,11 +16,9 @@ include_once("../servidor.php");
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
 </head>
-
 <body>
     <div class="container">
         <section class="col-md-2">
-
         </section>
         <section class="col-md-8">
             <h3 class="mt-5">Lista de Livros</h3>
@@ -27,6 +27,7 @@ include_once("../servidor.php");
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
+                        <th scope="col">Foto</th>
                         <th scope="col">Valor</th>
                         <th scope="col">Editar / DELETAR</th>
                     </tr>
@@ -34,7 +35,7 @@ include_once("../servidor.php");
                 <tbody>
                     <?php
                         //Query
-                        $sql = " SELECT cod_liv, titulo_liv, valor_liv FROM TB_LIVRO ";
+                        $sql = " SELECT cod_liv, titulo_liv, valor_liv, img_liv FROM TB_LIVRO ";
 
                         // EXECUTAR
                         $resposta = mysqli_query($banco, $sql);
@@ -44,13 +45,14 @@ include_once("../servidor.php");
                         // EXIBIR OS REGISTRO
                         //TABELA ["nome_coluna"] ; tabela[indece];
                         while($tabela = mysqli_fetch_array($resposta)){
-                            // FAZER A FORMATAÇÃO DA LINHA DA TABELA
-
-                            echo
+                        // FAZER A FORMATAÇÃO DA LINHA DA TABELA
+                        echo
+                        
                                 "
                                     <tr>
                                         <th scope='row'>".$tabela["cod_liv"]."</th>
                                         <td scope='row'>".$tabela["titulo_liv"]."</td>
+                                        <td scope='row'><img src='".$tabela["img_liv"]."'></td>                                      
                                         <td scope='row'>".number_format($tabela["valor_liv"],2,",",".")."</td>
                                         <td scope='row'>
                                             <button type='button' class='btn btn-primary'>
@@ -59,14 +61,11 @@ include_once("../servidor.php");
                                                 </a>
                                             </button>
                                             <button type='button' class='btn btn-danger'>
-                                                <a class='text-white' href='altlivro.php?cod_liv=".$tabela["cod_liv"]."'>
-                                                    <span class='material-symbols-outlined'></span>
-                                                        <img src='img/lixo.svg' width=32 title='deletar'>
-                                                    </span>
+                                                <a class='text-white' href='delLivro.php?cod_liv=".$tabela["cod_liv"]."'>
+                                                    <img src='img/lixo.svg' width=32 title='deletar'>
                                                 </a>
                                             </button>
-                                        </td>
-                                        
+                                        </td>                                        
                                     </tr>
                                 ";
                         }
